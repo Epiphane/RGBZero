@@ -31,7 +31,7 @@ public class TrackCreatorScript : MonoBehaviour {
                 trackPiece.transform.position = skeleton.GetPositionByT(i + t);
 
                 Vector3 ahead = skeleton.GetPositionByT(i + t + 0.1f);
-                trackPiece.transform.rotation = Quaternion.FromToRotation(Vector3.forward, ahead - trackPiece.transform.position) * Quaternion.AngleAxis(skeleton.GetTrackAngleByT(t), Vector3.back);
+                trackPiece.transform.rotation = Quaternion.FromToRotation(Vector3.forward, ahead - trackPiece.transform.position) * Quaternion.AngleAxis(skeleton.GetTrackAngleByT(i + t), Vector3.back);
             }
         }
     }
